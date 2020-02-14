@@ -11,9 +11,11 @@ def path():
     obj_drive=webdriver.Chrome(executable_path="C://Users/DELL/Desktop/CODING/chromedriver.exe")
 
 
-username="9461625960"
-#print("Enter password")
-password="Password@1"
+username="Your email"                      #you can also link it from file
+#print("Enter password")                   # with open('test.txt', 'r') as myfile:   
+                                           #Password = myfile.read().replace('\n', '') 
+                                           # user.send_keys(Password)       
+password="Your password"
 #print("enter url")
 url="https://www.instagram.com/"
 
@@ -44,7 +46,7 @@ def pic():
     pic=obj_drive.find_element_by_class_name("_9AhH0")
   #  pic.click()
 
-def like_pic():
+def like_pics():
     
     like=obj_drive.find_element_by_class_name('_8-yf5')
     time.sleep(2)
@@ -60,17 +62,17 @@ def next_picture():
 #def continue():
 def continue_liking(): 
 	while(True): 
-		next_el = next_picture() 
+		next_elm = next_picture() 
 
 		# if next button is there then 
-		if next_el != False: 
+		if next_elm != False: 
 
 			# click the next button 
-			next_el.click() 
+			next_elm.click() 
 			time.sleep(2) 
 
 			# like the picture 
-			like_pic()	 
+			like_pics()	 
 			time.sleep(2)			 
 		else: 
 			print("not found") 
